@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gradient Overlay</title>
+        <style>
+            .gradient-overlay {
+                width: 80%;
+                position: relative;
+                margin: 20px auto;
+                display: flex;
+                justify-content: center;
+            }
+            .gradient-overlay img {
+                width: 100%;
+            }
+            .gradient-overlay::before {
+                content: "";
+                background-image: linear-gradient(
+                    to top left,
+                    #1f1f1f,
+                    transparent
+                );
+                height: 100%;
+                position: absolute;
+                width: 100%;
+                transition: opacity 0.25s ease-in-out;
+            }
+            .gradient-overlay:hover::before {
+                opacity: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="gradient-overlay">
+            <img src="cat.webp" alt="a cute cat" />
+        </div>
+    </body>
+</html>

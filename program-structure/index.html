@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Program Structure</title>
+    </head>
+    <body>
+        <h1>Program Structure</h1>
+
+        <script>
+            /* This is a multiple line comments
+            Another line
+            Another line */
+            // This is a single line comment
+
+            console.log("you can just use the string like this");
+            /* Variables */
+            var firstName;
+            console.log(firstName); /* Undefined */
+            firstName = "Zeyao";
+            console.log(firstName);
+
+            let ten = 10;
+            console.log(ten);
+            console.log(ten * ten);
+            /* You can change the variable with let */
+            let mood = "happy";
+            console.log(mood);
+            mood = "sad";
+            console.log(mood);
+
+            let price = 100;
+            let discount = 0.8;
+            let currentPrice = price * discount;
+            console.log(currentPrice);
+
+            let name = "Zeyao";
+            let greeting = "Hello";
+            console.log(greeting + " " + name);
+            name = "Elijah";
+            console.log(greeting + " " + name);
+
+            const myLegalName = "Zeyao";
+            console.log(myLegalName);
+            // myLegalName = "Jack";
+
+            /* You can't name your variable starting with number. Usually camel case or underscore to connect */
+
+            /* Function */
+            function greet(name /* Arguments*/) {
+                console.log(name);
+            }
+            greet("Zeyao");
+
+            /* Returning Value */
+            console.log(Math.max(2, 4));
+
+            /* function with return */
+            function addTwoNumber(first, second) {
+                return first + second;
+            }
+            let result = addTwoNumber(2, 5);
+            console.log(result);
+            // console.log(greet("erik"));
+
+            /* Program will run from top to bottom normally without a constrain*/
+
+            /* Conditional Execution */
+            if (1 + 1 === 2) {
+                console.log("This is true");
+            }
+
+            let randomNumber = Math.random() * 10;
+            console.log(randomNumber);
+            if (randomNumber > 5) {
+                console.log(`${randomNumber} is bigger than 5`);
+            } else if (randomNumber === 5) {
+                console.log(`${randomNumber} is equal to 5`);
+            } else {
+                console.log(`${randomNumber} is less than 5`);
+            }
+
+            /* 
+            console.log(0);
+            console.log(1);
+            console.log(2);
+            console.log(3);
+            console.log(4);
+            console.log(5);
+            console.log(6);
+            console.log(7);
+            */
+            let num = 0;
+            while (num <= 7) {
+                console.log(num);
+                num = num + 1;
+            }
+        </script>
+    </body>
+</html>

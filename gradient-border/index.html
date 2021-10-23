@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gradient Border</title>
+        <style>
+            .gradient-border {
+                width: 50%;
+                position: relative;
+                margin: 20px auto;
+                display: flex;
+                justify-content: center;
+            }
+            img {
+                width: 90%;
+                object-fit: contain;
+                padding: 25px;
+            }
+            .gradient-border::before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background-image: linear-gradient(#edc5c5, #1560bd);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="gradient-border">
+            <img src="cat.webp" alt="a cute cat" />
+        </div>
+    </body>
+</html>

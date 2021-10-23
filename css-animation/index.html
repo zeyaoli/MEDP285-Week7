@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Animation</title>
+        <style>
+            #container {
+                display: flex;
+                justify-content: space-between;
+            }
+            @keyframes rotation {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            .compass {
+                animation-name: rotation;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                /* https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function */
+                animation-timing-function: linear;
+                animation-direction: normal;
+                /* shorthand of the above */
+                /* animation: rotation 2s infinite linear normal; */
+            }
+            .c1 {
+                animation-duration: 8s;
+            }
+            .c2 {
+                animation-duration: 4s;
+            }
+            .c3 {
+                animation-duration: 2s;
+                animation-delay: 2s;
+            }
+            .c4 {
+                animation-duration: 1s;
+            }
+            .compass:hover {
+                animation-play-state: paused;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <img
+                class="compass c1"
+                src="compass.svg"
+                width="200"
+                height="200"
+            />
+            <img
+                class="compass c2"
+                src="compass.svg"
+                width="200"
+                height="200"
+            />
+            <img
+                class="compass c3"
+                src="compass.svg"
+                width="200"
+                height="200"
+            />
+            <img
+                class="compass c4"
+                src="compass.svg"
+                width="200"
+                height="200"
+            />
+        </div>
+    </body>
+</html>
